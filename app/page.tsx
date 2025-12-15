@@ -85,19 +85,20 @@ export default function Dashboard() {
     try {
       await signInWithPopup(auth, provider);
     } catch (error) {
-      setLoginError("Google Login Gagal: " + error.message);
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      setLoginError("Google Login Gagal: " + errorMessage);
     }
   };
 
   // --- FUNGSI LOGIN MANUAL (EMAIL/PASS) ---
-  const handleManualLogin = async (e) => {
+  const handleManualLogin = async (e: React.FormEvent) => {
     e.preventDefault(); // Mencegah reload halaman
     setLoginError(""); // Reset error
     
     try {
       await signInWithEmailAndPassword(auth, email, password);
       // Jika sukses, user otomatis ter-set lewat useEffect
-    } catch (error) {
+    } catch (error: any) {
       console.error("Login Manual Error:", error);
       // Pesan error yang user-friendly
       if (error.code === 'auth/invalid-credential') {
