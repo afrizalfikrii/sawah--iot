@@ -27,7 +27,7 @@ import {
 
 export default function Dashboard() {
   // --- STATE USER & AUTH ---
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<any>(null);
   const [authLoading, setAuthLoading] = useState(true);
   
   // State untuk Form Login Manual
@@ -40,7 +40,7 @@ export default function Dashboard() {
   const [status, setStatus] = useState("Menunggu Data...");
   const [isManual, setIsManual] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [lastUpdate, setLastUpdate] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
 
   // 1. CEK STATUS LOGIN
   useEffect(() => {
