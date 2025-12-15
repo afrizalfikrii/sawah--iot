@@ -8,7 +8,8 @@ import {
   signInWithPopup, 
   signInWithEmailAndPassword, // <--- Import fungsi login manual
   signOut, 
-  onAuthStateChanged 
+  onAuthStateChanged,
+  User 
 } from "firebase/auth";
 import { 
   Wifi, 
@@ -26,7 +27,7 @@ import {
 
 export default function Dashboard() {
   // --- STATE USER & AUTH ---
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   
   // State untuk Form Login Manual
