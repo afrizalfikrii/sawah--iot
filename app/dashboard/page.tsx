@@ -6,6 +6,9 @@ import { ref, onValue, set } from "firebase/database";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 
+// Force dynamic rendering (tidak pre-render saat build)
+export const dynamic = 'force-dynamic';
+
 export default function Dashboard() {
   const router = useRouter();
   const [jarak, setJarak] = useState(0);
