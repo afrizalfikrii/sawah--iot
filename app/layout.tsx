@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SawahGuard IoT",
+  title: "AgroShield IoT",
   description: "Dashboard Monitoring Pengusir Hama Padi Otomatis",
 };
 

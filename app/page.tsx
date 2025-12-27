@@ -244,7 +244,7 @@ export default function Dashboard() {
             <div className="p-3 bg-green-500/10 rounded-2xl border border-green-500/20 mb-3">
               <Sprout className="w-8 h-8 text-green-400" />
             </div>
-            <h1 className="text-2xl font-bold text-white">SawahGuard</h1>
+            <h1 className="text-2xl font-bold text-white">AgroShield</h1>
             <p className="text-slate-400 text-sm">Masuk untuk memantau</p>
           </div>
           <form onSubmit={handleManualLogin} className="space-y-4">
@@ -281,7 +281,7 @@ export default function Dashboard() {
               <Sprout className="w-8 h-8 text-green-400" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">AgroSheild IoT</h1>
+              <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">AgroShield IoT</h1>
               <p className="text-slate-400 text-sm">Halo, {user.displayName || user.email}</p>
             </div>
           </div>
